@@ -6,13 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h4>Mapping in JS</h4>
-    <p id="my"></p>
+    <h2>Sorting and Mapping in JS</h2>
     <button onclick="asc()">Asc</button>
     <button onclick="dsc()">Dsc</button>
+    <p id="my"></p>
+
     <script>
-        var points=[62,68,7,85,155,55,69,74.105,115,]
-        document.getElementById("my").innerHTML=points;
+        var points=[41,66,76,88,91,65,40,5,7,69,32,36]
+        function myfun(set){
+            return set*8
+        }
+        var newnumbers=points.map(myfun);
+        document.getElementById("my").innerHTML=newnumbers;
         function asc(){
             points.sort(function(a,b){return a-b});
             document.getElementById("my").innerHTML=points;
